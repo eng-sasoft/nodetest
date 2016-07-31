@@ -52,12 +52,12 @@ function getDomainName(qs){
         }
     }
 }
-function getEvent(qs){
+function getEvent(qs){//www.google.com/event/ get event 
     var isDotCom=qs.indexOf('.com/');
     var lastForwordSlash=qs.lastIndexOf('/');
     var domain="";
     if(isDotCom>-1 && isDotCom<lastForwordSlash){
-                    console.log('event',event)
+                    
                     var event=qs.substring(qs.indexOf('.com/')+5,qs.lastIndexOf('/'))
                     if(qs.indexOf('.')<qs.indexOf('.com')){
                         domain=qs.substring(qs.indexOf('.')+1,qs.indexOf('.com')+4);

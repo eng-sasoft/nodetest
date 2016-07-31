@@ -3,7 +3,7 @@
 <body>
 
     <h1> Following are the titles of given websites: </h1>
-
+<%if(allAddresses){%>
     <%if(allAddresses instanceof Array){%>
     <ul>
         <%for(var i=0; i<allAddresses.length; i++){%>
@@ -13,6 +13,9 @@
     
     <%}else {%>
         <p> <%=allAddresses.url%> - <%if(allAddresses.event){%>Event-<%=allAddresses.domain%><%}else{%> <%=allAddresses.domain%><%}%></p>
+    <%}%>
+<%}else{%>
+        <p>Enter query String like ?www.google.com or google.com etc</p>
     <%}%>
 </body>
 </html>

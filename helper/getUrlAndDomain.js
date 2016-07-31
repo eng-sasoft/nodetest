@@ -11,7 +11,7 @@ function queryStrParser(qS){
             })
             
         }
-        console.log(allAdresses)
+        
         return allAdresses;
         
     }

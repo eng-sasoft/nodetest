@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var getUrlCtrl=require('../controllers/title.controller.js');
+var getUrlCtrl=require('../controllers/url.controller.js');
 
 router.get('/',getUrlCtrl.getUrl);//callback
 //router.get('/',getUrlCtrl.getUrlwithPromise);
