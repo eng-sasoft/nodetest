@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+
+    <h1> Following are the titles of given websites: </h1>
+
+    <%if(allAddresses instanceof Array){%>
+    <ul>
+        <%for(var i=0; i<allAddresses.length; i++){%>
+            <li><%=allAddresses[i].url%> - <%if(allAddresses[i].event){%>Event-<%=allAddresses[i].domain%><%}else{%> <%=allAddresses[i].domain%><%}%></li>
+        <%}%>
+    </ul>
+    
+    <%}else {%>
+        <p> <%=allAddresses.url%> - <%if(allAddresses.event){%>Event-<%=allAddresses.domain%><%}else{%> <%=allAddresses.domain%><%}%></p>
+    <%}%>
+</body>
+</html>
