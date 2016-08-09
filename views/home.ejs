@@ -1,10 +1,18 @@
 <html>
 <head>
-    title</head>
+    <title>
+        <%if(allAddresses){%>
+        <%=allAddresses.title%>
+         <%}else{%>
+            no Title
+        <%}%>
+    </title>
+    </head>
 <body>
 
-    <h1> Following are the titles of given websites: </h1>
+    
 <%if(allAddresses){%>
+    <h1> Following are the titles of given websites: </h1>
     <%if(allAddresses instanceof Array){%>
     <ul>
         <%for(var i=0; i<allAddresses.length; i++){%>
@@ -16,7 +24,7 @@
         <p> <%=allAddresses.url%> - <%if(allAddresses.event){%>Event-<%=allAddresses.domain%><%}else{%> <%=allAddresses.domain%><%}%></p>
     <%}%>
 <%}else{%>
-        <p>Enter query String like ?www.google.com or google.com etc</p>
+        <p>Enter query String like ?address=www.google.com or address=google.com etc</p>
     <%}%>
 </body>
 </html>

@@ -4,15 +4,18 @@ function queryStrParser(qS){
     
    return new Promise(function(resolve,reject){
        if(typeof(qS)=='string'){//checking for single url
-         resolve(formatingUrl.getDomainName(qS))
+         resolve(formatingUrl.getDomainAndTitle(qS))
     }else{//incase of multiple 
        
         if(qS instanceof Array){
             var allAdresses=[];
             qS.forEach(function(add){
-                allAdresses.push(formatingUrl.getDomainName(add));
+                allAdresses.push(formatingUrl.getDomainAndTitle(add));
             })
-            
+            allAdresses.title="";
+            allAdresses.forEach(function(address){
+            allAdresses.title+=address.title+" "
+            })
         }
         resolve (allAdresses);
         
